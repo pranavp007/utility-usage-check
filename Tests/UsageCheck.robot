@@ -38,9 +38,8 @@ Check "Water" usage for the day
 
     ${todays_use} =  Write to File and Return Daily usage   ${WATER_USAGE_FILE}   ${date}     ${latest_reading}     ${WATER_READING_PRECISION}
 
-    Log  Water usage on ${date} is ${todays_use}
+    Log to console  Water usage on ${date} is ${todays_use}
 
-    Sleep  2s
 
 
 Check "Power" usage for the day
@@ -66,9 +65,7 @@ Check "Power" usage for the day
 
     ${todays_use} =  Write to File and Return Daily usage   ${POWER_USAGE_FILE}   ${date}     ${latest_reading}     ${POWER_READING_PRECISION}
 
-    Log  Power usage on ${date} is ${todays_use}
-
-    Sleep  2s
+    Log to console  Power usage on ${date} is ${todays_use}
 
 
 
@@ -123,7 +120,7 @@ Test "Water" File part
     
     Log  Power usage on ${date} is ${todays_use}
 
-    Sleep  2s
+ 
 
 Test "Power" File part
     [Documentation]  Test only Power file part
@@ -136,6 +133,6 @@ Test "Power" File part
     
     Log  Power usage on ${date} is ${todays_use}
 
-    Sleep  2s
+
 
 
